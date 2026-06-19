@@ -1,0 +1,359 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* PALETA GRID GOL */
+:root{
+    --primary:#ff120a;
+    --primary-dark:#c40000;
+
+    --black:#111111;
+    --black-light:#1c1c1c;
+
+    --white:#ffffff;
+    --gray:#cfcfcf;
+
+    --shadow:rgba(0,0,0,.35);
+
+    --radius:12px;
+}
+
+/* BODY */
+body{
+    font-family:'Segoe UI', Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.85),
+            rgba(0,0,0,.85)
+        );
+
+    background-color:#0f0f0f;
+
+    color:white;
+
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 50px;
+
+    background:#111;
+
+    border-bottom:4px solid var(--primary);
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+/* LOGO */
+.logo{
+    font-size:32px;
+    font-weight:900;
+
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    text-shadow:
+        3px 3px 0 #000,
+        0 0 15px rgba(255,18,10,.4);
+}
+
+.logo img{
+    height:80px;
+    width:auto;
+}
+
+/* MENU */
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:72px;
+
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    text-shadow:
+        4px 4px 0 #000,
+        0 0 25px rgba(255,18,10,.4);
+
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+
+    color:#ddd;
+}
+
+.hero::after{
+    content:"⚽ 🏎️";
+
+    display:block;
+
+    margin-top:25px;
+
+    font-size:45px;
+}
+
+/* BOTÕES */
+button,
+.hero button,
+.card button,
+form button{
+    padding:14px 30px;
+
+    margin-top:20px;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+        0 5px 15px rgba(255,18,10,.3);
+}
+
+button:hover,
+.hero button:hover,
+.card button:hover,
+form button:hover{
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+}
+
+/* SEÇÕES */
+section{
+    padding:70px 20px;
+}
+
+/* TÍTULOS */
+h2{
+    text-align:center;
+
+    color:white;
+
+    font-size:40px;
+
+    text-transform:uppercase;
+
+    margin-bottom:40px;
+}
+
+h2::after{
+    content:"";
+
+    display:block;
+
+    width:90px;
+    height:4px;
+
+    background:var(--primary);
+
+    margin:12px auto;
+
+    border-radius:50px;
+}
+
+/* GRID */
+.grid{
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+/* CARDS */
+.card{
+    background:#181818;
+
+    border-top:4px solid var(--primary);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    transition:.3s;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.4);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.5);
+}
+
+.card img{
+    width:100%;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:var(--primary);
+
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#ddd;
+}
+
+/* CTA */
+.cta{
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    text-align:center;
+
+    color:white;
+}
+
+.cta h2{
+    color:white;
+}
+
+/* FORMULÁRIOS */
+form{
+    max-width:550px;
+
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:14px;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    background:white;
+
+    color:#111;
+
+    font-size:15px;
+
+    outline:none;
+}
+
+input:focus,
+textarea:focus{
+    box-shadow:
+        0 0 0 3px rgba(255,18,10,.3);
+}
+
+textarea{
+    resize:none;
+    height:130px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+
+    background:#111;
+
+    border-top:4px solid var(--primary);
+
+    padding:25px;
+
+    color:white;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+}
