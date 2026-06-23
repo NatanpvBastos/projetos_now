@@ -213,7 +213,8 @@ Projeto desenvolvido para fins educacionais visando a aplicação prática dos c
 
 | Integrante | Função |
 |------------|---------|
-| Natanael | Gustavo | Aquilles |  Desenvolvedor |
+| Natanael | Desenvolvedor |
+| Gustavo | Aquilles | Desenvolvedor | 
 | Juan Willian | Banco de Dados |
 | Natanael | Front-end |
 | Tamiris | Kauan | Design|
