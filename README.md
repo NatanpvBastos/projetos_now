@@ -69,12 +69,12 @@ Responsável por receber as requisições e realizar a comunicação entre Model
 Projeto_grid_gol/
 │
 ├── app/
-│   ├── controllers/
+│   ├── Controllers/
 │   │   ├── ProdutoController.php
 │   │   ├── UsuarioController.php
 │   │   └── PedidoController.php
 │   │
-│   ├── models/
+│   ├── Model/
 │   │   ├── Produto.php
 │   │   ├── Usuario.php
 │   │   └── Pedido.php
@@ -85,17 +85,19 @@ Projeto_grid_gol/
 │       ├── usuarios/
 │       └── pedidos/
 │
-├── public/
+├── assets/
 │   ├── css/
 │   ├── js/
 │   ├── img/
-│   └── index.php
+├── help/
+│   ├── PainelHelper.php
+│   
+│   
 │
 ├── config/
 │   └── database.php
-│
-├── routes/
-│   └── web.php
+│── Index.php
+│    
 │
 └── README.md
 ```
@@ -178,7 +180,7 @@ config/database.php
 ### Executar o Projeto
 
 ```bash
-php -S localhost:8000 -t public
+php -S localhost:8000
 ```
 
 Acesse:
@@ -211,13 +213,15 @@ Projeto desenvolvido para fins educacionais visando a aplicação prática dos c
 
 | Integrante | Função |
 |------------|---------|
-| Aluno 1 | Desenvolvedor |
-| Aluno 2 | Banco de Dados |
-| Aluno 3 | Front-end |
+| Natanael | Gustavo | Aquilles |  Desenvolvedor |
+| Juan Willian | Banco de Dados |
+| Natanael | Front-end |
+| Tamiris | Kauan | Design|
+| Juan William | Documentação |
 
 ---
 
-## 📄 Licença
+## 📄 Licença GPL 3.0
 
 Este projeto foi desenvolvido exclusivamente para fins acadêmicos.
 
