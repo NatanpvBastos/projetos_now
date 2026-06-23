@@ -68,7 +68,6 @@ Responsável por receber as requisições e realizar a comunicação entre Model
 ```text
 Projeto_grid_gol/
 │
-├── app/
 │   ├── Controllers/
 │   │   ├── ProdutoController.php
 │   │   ├── UsuarioController.php
