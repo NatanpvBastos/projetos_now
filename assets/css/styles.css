@@ -1,0 +1,386 @@
+/* ==========================================================================
+   assets/css/styles.css - Identidade Visual Original Clara (Light UI) - GRID&GOL
+   ========================================================================== */
+
+/* Configurações Globais e Paleta de Cores ORIGINAIS */
+:root {
+    --primary: #ff120a;       /* Vermelho Esportivo */
+    --primary-hover: #cc0e08; /* Vermelho Mais Escuro para Hover */
+    --black: #050505;         /* Elementos Escuros (Header/Footer) */
+    --bg-light: #f8f9fa;      /* RETORNADO: Fundo Geral da Vitrine (Cinza Claro) */
+    --white: #ffffff;         /* RETORNADO: Fundo dos Cards (Branco) */
+    --text: #333333;          /* RETORNADO: Texto Principal Escuro */
+    --gray: #777777;          /* RETORNADO: Textos Secundários / Descrições */
+    --border: #e0e0e0;        /* RETORNADO: Linhas e Divisores Claros */
+    --shadow: rgba(0, 0, 0, 0.08);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* --- HEADER / NAVEGAÇÃO --- */
+header {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+header .logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--white);
+}
+
+header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+header nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: var(--primary);
+}
+
+header .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header .user-actions .icon {
+    color: var(--white);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+header .user-actions .icon:hover {
+    color: var(--primary);
+}
+
+/* --- HERO BANNER --- */
+.hero-slider {
+    position: relative;
+    height: 45vh;
+    overflow: hidden;
+}
+
+.hero-slider .slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: #dfdfdf;
+}
+
+.btn-hero {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.8rem 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.btn-hero:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* --- CONTAINER GLOBAL --- */
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+}
+
+/* ==========================================================================
+   GRID DE PRODUTOS RESTAURADA (CORES ORIGINAIS + ESTRUTURA BLINDADA)
+   ========================================================================== */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+    align-items: stretch; /* Impede desalinhamentos forçando as colunas a terem a mesma altura */
+}
+
+.product-card {
+    background-color: var(--white); /* RETORNADO: Fundo branco original */
+    border: 1px solid var(--border);  /* RETORNADO: Borda suave clara original */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+    
+    /* SEGURANÇA VISUAL: Alinha todos os cards rigorosamente iguais por baixo dos panos */
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-hover);
+}
+
+/* Envoltório Protetor de Imagem */
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 280px; /* Mantém a proporção e enquadramento exato das fotos */
+    background-color: #f5f5f5; /* RETORNADO: Fundo neutro claro para destacar a roupa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Ajuste Inteligente Proporcional da Imagem */
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta proporcionalmente sem amassar ou distorcer as camisolas */
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.03);
+}
+
+/* Informações do Card com Padding Seguro */
+.product-info {
+    padding: 1.5rem; /* Respiro interno que remove o aspeto colado ou esmagado */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Força esta área a expandir e alinhar as caixas vizinhas de forma uniforme */
+}
+
+/* Categoria / Marca */
+.product-category {
+    font-size: 0.8rem;
+    color: var(--primary); /* Destaque sutil no vermelho principal */
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+}
+
+/* Título Escuro com Trava Invisível de Altura */
+.product-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--black); /* RETORNADO: Cor escura original */
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    
+    /* Reserva cirurgicamente o espaço de até 2 linhas. Se for 1 linha, deixa o espaço livre invisível */
+    min-height: 3.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Descrição Escura Suave com Trava de Altura */
+.product-description {
+    font-size: 0.9rem;
+    color: var(--gray); /* RETORNADO: Cinza médio original */
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    
+    /* Garante consistência de espaço para textos longos ou curtos */
+    min-height: 2.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Rodapé do Card: Alinhamento Reto Horizontal Perfeito */
+.product-price-action {
+    margin-top: auto; /* Mágica do CSS que cola os botões na base horizontal do card */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0; /* Divisor claro e elegante */
+}
+
+/* Preço */
+.product-price-action .price {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--black); /* RETORNADO: Valor em tom escuro original */
+}
+
+/* Botão Circular Comercial */
+.btn-add-cart {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-add-cart:hover {
+    background-color: var(--black);
+    color: var(--white);
+    transform: scale(1.08);
+}
+
+/* Informações de Estoque */
+.stock-info {
+    font-size: 0.8rem;
+    color: #2e7d32; /* Verde floresta nativo para alta legibilidade em fundos claros */
+    font-weight: 600;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--black);
+    color: var(--gray);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--primary);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVIDADE MANTIDA)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    header {
+        padding: 1rem 3%;
+    }
+    header nav {
+        gap: 1.25rem;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .product-grid {
+        gap: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.2rem 1rem;
+    }
+    header nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    header .user-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.25rem;
+    }
+    .product-image-wrapper {
+        height: 240px;
+    }
+    .product-info {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-image-wrapper {
+        height: 280px;
+    }
+}

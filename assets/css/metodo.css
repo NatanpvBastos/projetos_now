@@ -1,0 +1,54 @@
+
+        /* =========================================================================
+           CORREÇÃO DE CONTRASSTE E UI PARA OS MEIOS DE PAGAMENTO (FUNDO ESCURO)
+           ========================================================================= */
+        .payment-selection-box {
+            margin: 20px 0;
+            padding-top: 15px;
+            border-top: 1px dashed #444; /* Linha tracejada adaptada ao fundo escuro */
+        }
+        .payment-selection-box h3 {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            color: #fff; /* Título em branco para contrastar com o painel preto */
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-align: left;
+        }
+        .payment-option-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #fff; /* Fundo do botão continua branco */
+            color: #111111 !important; /* CORRIGIDO: Força o texto a ser preto e visível */
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .payment-option-label:hover {
+            border-color: #ff120a; /* Destaca a borda ao passar o mouse */
+            background: #f8f9fa;
+        }
+        .payment-option-label input[type="radio"] {
+            accent-color: #111; /* Cor do marcador do rádio */
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .payment-option-label i {
+            font-size: 1.2rem;
+            width: 24px;
+            color: #333 !important; /* CORRIGIDO: Força os ícones a ficarem escuros */
+            text-align: center;
+        }
+        /* Estado ativo selecionado via JavaScript */
+        .payment-option-label.selected {
+            border: 2px solid #ff120a; /* Borda vermelha de destaque no botão ativo */
+            background: #f1f1f1;
+        }

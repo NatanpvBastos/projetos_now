@@ -1,0 +1,87 @@
+/* =========================================================================
+           MELHORIAS DE UX/UI: REESTRUTURAÇÃO DOS CAMPOS DE ENTRADA (FORM DATA)
+           ========================================================================= */
+.payment-content {
+    background: #151515;
+    /* Casando com o tom escuro do seu layout */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.payment-content h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+/* Labels com contraste perfeito sobre o fundo escuro */
+.form-group label {
+    color: #dddddd;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs modernos, claros e com foco responsivo */
+.form-group input {
+    background-color: #ffffff !important;
+    /* Força o fundo branco para leitura perfeita */
+    color: #111111 !important;
+    /* Texto digitado em preto */
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 12px 14px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Efeito de foco profissional (padrão de e-commerce) */
+.form-group input:focus {
+    border-color: #ff120a;
+    /* Borda vermelha padrão da GRID&GOL */
+    box-shadow: 0 0 0 3px rgba(255, 18, 10, 0.15);
+    outline: none;
+    background-color: #f8f9fa !important;
+}
+
+/* Placeholder em cinza elegante */
+.form-group input::placeholder {
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+/* Alinhamento lado a lado para Validade e CVV */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Estilização para as instruções do PIX e Boleto */
+.payment-instruction {
+    color: #bbbbbb;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background: #202020;
+    padding: 15px;
+    border-left: 4px solid #ff120a;
+    border-radius: 4px;
+    margin: 10px 0;
+}

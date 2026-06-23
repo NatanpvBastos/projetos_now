@@ -1,0 +1,72 @@
+/* Estilos adicionais integrados para a tabela do CRUD */
+.crud-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.table-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+    border: 1px solid #e0e0e0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #050505;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.img-tabela {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.btn-action {
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.btn-edit {
+    background: #1976d2;
+    color: #fff;
+}
+
+.btn-delete {
+    background: #ff120a;
+    color: #fff;
+}
+
+.btn-action:hover {
+    opacity: 0.8;
+}
+
+header .logo span {
+    color: #ff120a;
+}

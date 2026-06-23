@@ -1,0 +1,137 @@
+/* CSS estrutural para garantir o layout correto do Dashboard */
+body {
+    background-color: #f4f6f9;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Menu Lateral (Sidebar) */
+.sidebar {
+    width: 260px;
+    background-color: #050505;
+    color: #fff;
+    padding: 1.5rem;
+    flex-shrink: 0;
+}
+
+.sidebar .brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.sidebar .brand span {
+    color: #ff120a;
+}
+
+.sidebar .menu-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 1px;
+    margin: 1.5rem 0 0.5rem 0;
+    font-weight: bold;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    color: #bbb;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.sidebar a.logout {
+    color: #ff5252;
+    margin-top: 2rem;
+}
+
+.sidebar a.logout:hover {
+    background-color: #ff120a;
+    color: #fff;
+}
+
+/* Área de Conteúdo */
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.welcome-header {
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    margin-bottom: 2rem;
+    border-left: 5px solid #ff120a;
+}
+
+.welcome-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #050505;
+}
+
+.welcome-header h2 span {
+    color: #ff120a;
+}
+
+/* Cartões de Métricas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 3px solid #ff120a;
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.stat-card .number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #050505;
+    margin-top: 5px;
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    color: #eee;
+}

@@ -1,0 +1,50 @@
+/* Estilização complementar para a tabela de pedidos */
+.orders-table-container {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    overflow-x: auto;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.orders-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.badge {
+    padding: 0.35rem 0.7rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.badge-aprovado {
+    background-color: #e8fff0;
+    color: #28a745;
+}
+
+.badge-aguardando {
+    background-color: #fffde8;
+    color: #856404;
+}
+
+.badge-padrao {
+    background-color: #f1f3f5;
+    color: #6c757d;
+}

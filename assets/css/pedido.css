@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.success-card {
+    background: #fff;
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border-top: 5px solid #ff120a;
+}
+
+.icon-box {
+    color: #28a745;
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+
+.order-number {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.amount-box {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border: 1px solid #eef0f2;
+}
+
+.amount-box span {
+    color: #ff120a;
+}
+
+.method-section {
+    background: #fff;
+    border: 2px dashed #ddd;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.method-section h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #111;
+}
+
+.qr-placeholder {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    background: #eee;
+    border: 1px solid #ccc;
+}
+
+.input-copy-group {
+    display: flex;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+.input-copy-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;
+    background: #f9f9f9;
+    font-size: 13px;
+}
+
+.btn-copy {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 0 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-copy:hover {
+    background: #ff120a;
+}
+
+.barcode-mock {
+    background: #111;
+    height: 50px;
+    width: 100%;
+    margin: 15px 0;
+    background: repeating-linear-gradient(90deg, #111, #111 2px, #fff 2px, #fff 6px, #111 6px, #111 10px);
+}
+
+.btn-home {
+    display: inline-block;
+    background: #ff120a;
+    color: #fff;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-home:hover {
+    background: #111;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}

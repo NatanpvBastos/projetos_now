@@ -1,0 +1,212 @@
+/* Variáveis de Design da Identidade Visual GRID&GOL */
+:root {
+    --grid-bg: #f4f6f9;
+    --grid-dark: #050505;
+    --grid-red: #ff120a;
+    --grid-card: #ffffff;
+    --grid-text: #2b2b2b;
+    --grid-muted: #777777;
+    --grid-border: #e3e6ec;
+    --grid-success: #10b981;
+    --grid-error: #ef4444;
+    --radius: 6px;
+    --transition: all 0.25s ease;
+}
+
+body {
+    background-color: var(--grid-bg);
+    color: var(--grid-text);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estrutura de centralização UX */
+.profile-wrapper {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Botão de retorno estilizado */
+.back-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--grid-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 24px;
+    transition: var(--transition);
+}
+
+.back-nav:hover {
+    color: var(--grid-red);
+    transform: translateX(-3px);
+}
+
+/* Card de Edição */
+.profile-card {
+    background: var(--grid-card);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--grid-border);
+    overflow: hidden;
+}
+
+.profile-card-header {
+    background: var(--grid-dark);
+    padding: 30px;
+    color: #ffffff;
+    position: relative;
+}
+
+.profile-card-header h2 {
+    margin: 0 0 6px 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.profile-card-header h2 span {
+    color: var(--grid-red);
+}
+
+.profile-card-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.profile-card-body {
+    padding: 35px 30px;
+}
+
+/* Micro-UX: Alertas de Feedback Flutuantes/Internos */
+.grid-alert {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.grid-alert-success {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border-left: 4px solid var(--grid-success);
+}
+
+.grid-alert-error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border-left: 4px solid var(--grid-error);
+}
+
+/* Elementos de Formulário Industrial/Premium */
+.grid-form-group {
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.grid-form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--grid-dark);
+    margin-bottom: 8px;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    color: var(--grid-muted);
+    font-size: 16px;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.grid-input {
+    width: 100%;
+    padding: 13px 15px 13px 45px;
+    border: 1px solid var(--grid-border);
+    border-radius: var(--radius);
+    font-size: 15px;
+    color: var(--grid-text);
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: var(--transition);
+}
+
+.grid-input:focus {
+    background-color: #ffffff;
+    border-color: var(--grid-dark);
+    box-shadow: 0 0 0 4px rgba(5, 5, 5, 0.05);
+    outline: none;
+}
+
+.grid-input:focus+i {
+    color: var(--grid-red);
+}
+
+.input-help {
+    display: block;
+    font-size: 12px;
+    color: var(--grid-muted);
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+/* Botão de Submissão */
+.btn-grid-submit {
+    background-color: var(--grid-dark);
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    transition: var(--transition);
+}
+
+.btn-grid-submit:hover {
+    background-color: var(--grid-red);
+    box-shadow: 0 4px 15px rgba(255, 18, 10, 0.3);
+}
+
+.btn-grid-submit:active {
+    transform: scale(0.99);
+}
