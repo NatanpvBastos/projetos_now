@@ -216,7 +216,8 @@ Projeto desenvolvido para fins educacionais visando a aplicação prática dos c
 | Gustavo | Aquilles | Desenvolvedor | 
 | Juan Willian | Banco de Dados |
 | Natanael | Front-end |
-| Tamiris | Kauan | Design|
+| Tamiris | Design|
+| Kauan | Design |
 | Juan William | Documentação |
 
 ---
